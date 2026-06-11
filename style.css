@@ -141,6 +141,7 @@ h2 {
     padding: 1.5rem 0;
     overflow: hidden;
     border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 3rem;
 }
 
 .marquee-content {
@@ -456,6 +457,7 @@ h2 {
     scroll-snap-type: x mandatory;
     margin-right: calc(-50vw + 50%);
     padding-right: 5vw;
+    counter-reset: portfolio-counter;
 }
 
 .portfolio-carousel::-webkit-scrollbar {
@@ -500,6 +502,11 @@ h2 {
 .portfolio-num {
     font-size: 1.2rem;
     opacity: 0.8;
+}
+
+.portfolio-num::before {
+    counter-increment: portfolio-counter;
+    content: counter(portfolio-counter, decimal-leading-zero);
 }
 
 .portfolio-footer {
