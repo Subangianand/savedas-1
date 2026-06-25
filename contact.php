@@ -1,0 +1,210 @@
+<?php include 'header.php'; ?>
+
+<main class="contact-page">
+    <div class="container mx-auto">
+        <!-- Header & Toggle -->
+        <div class="contact-header">
+            <h1 class="contact-title">Let's Connect</h1>
+            <div class="contact-toggle-wrapper">
+                <div class="contact-toggle">
+                    <button class="toggle-btn active" data-target="message">Message</button>
+                    <button class="toggle-btn" data-target="call">Call</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Views -->
+        <div class="contact-views">
+            <!-- Message View -->
+            <div id="view-message" class="contact-view active">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <span class="info-label">Contact us</span>
+                        <h2>Your brand deserves to be unforgettable</h2>
+                        <p class="info-desc">Let's build something beautiful together.</p>
+
+                        <div class="info-details">
+                            <div class="info-row">
+                                <span class="label">(EMAIL)</span>
+                                <span class="value">officialsavedas@gmail.com</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="label">(PHONE)</span>
+                                <span class="value">+91 0123456789</span>
+                            </div>
+                        </div>
+
+                        <hr class="contact-divider">
+
+                        <div class="info-socials">
+                            <div class="social-row">
+                                <a href="#">Instagram <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg></a>
+                                <span class="social-handle">@official_savedas</span>
+                            </div>
+                            <div class="social-row">
+                                <a href="#">Twitter/x <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg></a>
+                            </div>
+                            <div class="social-row">
+                                <a href="#">Linkedin <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                        <polyline points="15 3 21 3 21 9"></polyline>
+                                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                                    </svg></a>
+                            </div>
+                        </div>
+
+                        <hr class="contact-divider">
+
+                        <div class="info-address">
+                            <span class="label">ADDRESS</span>
+                            <span class="value">123, street , chennai</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <div class="git-form-container black-card">
+                            <h3>Saved As</h3>
+                            <form>
+                                <div class="form-group">
+                                    <label for="contact-name">Name</label>
+                                    <input type="text" id="contact-name" name="name" placeholder="Your name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-email">email</label>
+                                    <input type="email" id="contact-email" name="email" placeholder="Enter your mail">
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-message">message</label>
+                                    <textarea id="contact-message" name="message"
+                                        placeholder="Type your message"></textarea>
+                                </div>
+                                <div class="form-submit">
+                                    <button type="submit" class="submit-btn-grey">submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call View -->
+            <div id="view-call" class="contact-view">
+                <div class="call-card gradient-bg">
+                    <h2>Lorem ipsum<br>dolor sit amet</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit, sed do eiusmod tempor
+                        incididunt<br>ut labore et dolore magna</p>
+                    <a href="#" class="book-call-btn">Book a call</a>
+                </div>
+                <p class="call-hint pink-text">( an option do arrange call through calendly , with gradient bg )</p>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section container">
+            <div class="faq-header">
+                <h2>FAQ</h2>
+                <p>Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit,</p>
+            </div>
+            <div class="faq-accordion-wrapper">
+                <div class="faq-accordion">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item active">
+                        <div class="faq-question">
+                            <span>1. Lorem ipsum dolor sit amet, ?</span>
+                            <span class="faq-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black"
+                                    stroke-width="1.5">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 8v8M8 12h8" class="plus" style="display:none;" />
+                                    <path d="M8 12h8" class="minus" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                ut labore et dolore magna aliqua.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2-6 -->
+                    <?php for ($i = 2; $i <= 6; $i++): ?>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <span><?php echo $i; ?>. Lorem ipsum dolor sit amet, ?</span>
+                                <span class="faq-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black"
+                                        stroke-width="1.5">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <path d="M12 8v8M8 12h8" class="plus" />
+                                        <path d="M8 12h8" class="minus" style="display:none;" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    <?php endfor; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    // Toggle Logic
+    const toggleBtns = document.querySelectorAll('.toggle-btn');
+    const views = document.querySelectorAll('.contact-view');
+
+    toggleBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons and views
+            toggleBtns.forEach(b => b.classList.remove('active'));
+            views.forEach(v => v.classList.remove('active'));
+
+            // Add active class to clicked button and corresponding view
+            btn.classList.add('active');
+            const targetId = 'view-' + btn.getAttribute('data-target');
+            document.getElementById(targetId).classList.add('active');
+        });
+    });
+
+    // FAQ Accordion Logic
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        item.querySelector('.faq-question').addEventListener('click', () => {
+            // Check if already active
+            const isActive = item.classList.contains('active');
+
+            // Close all items
+            faqItems.forEach(f => {
+                f.classList.remove('active');
+                f.querySelector('.plus').style.display = 'block';
+                f.querySelector('.minus').style.display = 'none';
+            });
+
+            // Open clicked item if it was not already active
+            if (!isActive) {
+                item.classList.add('active');
+                item.querySelector('.plus').style.display = 'none';
+                item.querySelector('.minus').style.display = 'block';
+            }
+        });
+    });
+</script>
+
+<?php include 'footer.php'; ?>

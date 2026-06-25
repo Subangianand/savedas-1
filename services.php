@@ -239,42 +239,228 @@ include 'header.php';
         <div class="listen-bg-text left">work</div>
         <div class="listen-bg-text right">img</div>
 
-        <div class="testimonial-card testimonial-card--light">
-            <div class="testimonial-top">
-                <div class="testimonial-avatar-row">
-                    <div class="testimonial-avatar">
-                        <div class="avatar-img">
-                            <img src="./assets/user.png" />
+        <!-- Slider track -->
+        <div class="testimonial-slider">
+            <!-- Slide 1 -->
+            <div class="testimonial-slide active">
+                <div class="testimonial-card testimonial-card--light">
+                    <div class="testimonial-top">
+                        <div class="testimonial-avatar-row">
+                            <div class="testimonial-avatar">
+                                <div class="avatar-img">
+                                    <img src="./assets/user.png" />
+                                </div>
+                            </div>
+                            <div class="testimonial-author">
+                                <strong>Sarah Johnson</strong>
+                                <span>CEO, TechFlow</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="testimonial-author">
-                        <strong>Name</strong>
-                        <span>Role</span>
+                    <div class="quote-image-section">
+                        <img src="./assets/quote.png" />
+                    </div>
+                    <div class="testimonial-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="testimonial-meta">
+                        <span>TechFlow Inc.</span>
+                        <span>@techflow</span>
                     </div>
                 </div>
             </div>
-            <div class="quote-image-section">
-                <img src="./assets/quote.png" />
-            </div>
-            <div class="testimonial-body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua.</p>
+
+            <!-- Slide 2 -->
+            <div class="testimonial-slide">
+                <div class="testimonial-card testimonial-card--light">
+                    <div class="testimonial-top">
+                        <div class="testimonial-avatar-row">
+                            <div class="testimonial-avatar">
+                                <div class="avatar-img">
+                                    <img src="./assets/user.png" />
+                                </div>
+                            </div>
+                            <div class="testimonial-author">
+                                <strong>Marcus Reid</strong>
+                                <span>Founder, UrbanWear</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quote-image-section">
+                        <img src="./assets/quote.png" />
+                    </div>
+                    <div class="testimonial-body">
+                        <p>Working with Saved As transformed our brand identity completely. Their creative direction and
+                            execution were beyond what we imagined.</p>
+                    </div>
+                    <div class="testimonial-meta">
+                        <span>UrbanWear Co.</span>
+                        <span>@urbanwear</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="testimonial-meta">
-                <span>company name</span>
-                <span>@instagram</span>
+            <!-- Slide 3 -->
+            <div class="testimonial-slide">
+                <div class="testimonial-card testimonial-card--light">
+                    <div class="testimonial-top">
+                        <div class="testimonial-avatar-row">
+                            <div class="testimonial-avatar">
+                                <div class="avatar-img">
+                                    <img src="./assets/user.png" />
+                                </div>
+                            </div>
+                            <div class="testimonial-author">
+                                <strong>Priya Nair</strong>
+                                <span>Head of Brand, Datasync</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quote-image-section">
+                        <img src="./assets/quote.png" />
+                    </div>
+                    <div class="testimonial-body">
+                        <p>The team understood our vision from day one. Every deliverable felt purposeful, consistent,
+                            and unmistakably us across every platform.</p>
+                    </div>
+                    <div class="testimonial-meta">
+                        <span>Datasync Labs</span>
+                        <span>@datasync</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="testimonial-slide">
+                <div class="testimonial-card testimonial-card--light">
+                    <div class="testimonial-top">
+                        <div class="testimonial-avatar-row">
+                            <div class="testimonial-avatar">
+                                <div class="avatar-img">
+                                    <img src="./assets/user.png" />
+                                </div>
+                            </div>
+                            <div class="testimonial-author">
+                                <strong>James Okafor</strong>
+                                <span>Creative Director, Cinemax</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quote-image-section">
+                        <img src="./assets/quote.png" />
+                    </div>
+                    <div class="testimonial-body">
+                        <p>From strategy to execution, they bring clarity to every touchpoint. Our brand feels alive and
+                            recognisable wherever it shows up.</p>
+                    </div>
+                    <div class="testimonial-meta">
+                        <span>Cinemax Studios</span>
+                        <span>@cinemax</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- Synced scroll bar -->
     <div class="listen-scroll-indicator">
-        <div class="scroll-bar">
-            <div class="scroll-thumb"></div>
+        <div class="scroll-bar" id="testimonialScrollBar">
+            <div class="scroll-thumb" id="testimonialScrollThumb"></div>
         </div>
-
     </div>
 </section>
+
+<script>
+    (function () {
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const scrollBar = document.getElementById('testimonialScrollBar');
+        const scrollThumb = document.getElementById('testimonialScrollThumb');
+        const totalSlides = slides.length;
+        let currentSlide = 0;
+        let isDragging = false;
+
+        // Thumb sizing with 10px padding on each side
+        const padding = 10;
+
+        function getTrackWidth() {
+            return scrollBar.offsetWidth - (padding * 2);
+        }
+
+        function updateThumbSize() {
+            const trackWidth = getTrackWidth();
+            const thumbWidth = trackWidth / totalSlides;
+            scrollThumb.style.width = thumbWidth + 'px';
+        }
+        updateThumbSize();
+
+        function goToSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = Math.max(0, Math.min(index, totalSlides - 1));
+            slides[currentSlide].classList.add('active');
+            updateThumb();
+        }
+
+        function updateThumb() {
+            const trackWidth = getTrackWidth();
+            const thumbWidth = trackWidth / totalSlides;
+            const leftPx = padding + (currentSlide * thumbWidth);
+            scrollThumb.style.left = leftPx + 'px';
+        }
+
+        // Click on scroll bar to jump to a slide
+        scrollBar.addEventListener('click', function (e) {
+            const rect = scrollBar.getBoundingClientRect();
+            const clickX = e.clientX - rect.left - padding;
+            const trackWidth = getTrackWidth();
+            const ratio = clickX / trackWidth;
+            const targetSlide = Math.floor(ratio * totalSlides);
+            goToSlide(targetSlide);
+        });
+
+        // Drag the scroll thumb
+        scrollThumb.addEventListener('mousedown', function (e) {
+            isDragging = true;
+            e.preventDefault();
+        });
+
+        document.addEventListener('mousemove', function (e) {
+            if (!isDragging) return;
+            const rect = scrollBar.getBoundingClientRect();
+            const dragX = e.clientX - rect.left - padding;
+            const trackWidth = getTrackWidth();
+            const ratio = dragX / trackWidth;
+            const targetSlide = Math.floor(ratio * totalSlides);
+            goToSlide(Math.max(0, Math.min(targetSlide, totalSlides - 1)));
+        });
+
+        document.addEventListener('mouseup', function () {
+            isDragging = false;
+        });
+
+        // Touch support
+        scrollThumb.addEventListener('touchstart', function (e) {
+            isDragging = true;
+        }, { passive: true });
+
+        document.addEventListener('touchmove', function (e) {
+            if (!isDragging) return;
+            const rect = scrollBar.getBoundingClientRect();
+            const touch = e.touches[0];
+            const dragX = touch.clientX - rect.left - padding;
+            const trackWidth = getTrackWidth();
+            const ratio = dragX / trackWidth;
+            goToSlide(Math.floor(ratio * totalSlides));
+        }, { passive: true });
+
+        document.addEventListener('touchend', function () {
+            isDragging = false;
+        });
+
+        // Initialise
+        updateThumb();
+    })();
+</script>
 
 <?php include 'get_in_touch.php'; ?>
 <?php include 'footer.php'; ?>
