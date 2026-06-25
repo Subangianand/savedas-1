@@ -103,13 +103,13 @@
 
             <!-- Call View -->
             <div id="view-call" class="contact-view">
-                <div class="call-card gradient-bg">
+                <div class="call-card gradient-bg"
+                    style="background: black url('./assets/contact-mask.png') no-repeat center center / cover;">
                     <h2>Lorem ipsum<br>dolor sit amet</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit, sed do eiusmod tempor
                         incididunt<br>ut labore et dolore magna</p>
                     <a href="#" class="book-call-btn">Book a call</a>
                 </div>
-                <p class="call-hint pink-text">( an option do arrange call through calendly , with gradient bg )</p>
             </div>
         </div>
 
@@ -124,7 +124,7 @@
                     <!-- FAQ Item 1 -->
                     <div class="faq-item active">
                         <div class="faq-question">
-                            <span>1. Lorem ipsum dolor sit amet, ?</span>
+                            <span>1. Lorem ipsum dolor sit amet</span>
                             <span class="faq-icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black"
                                     stroke-width="1.5">
@@ -143,7 +143,7 @@
                     <?php for ($i = 2; $i <= 6; $i++): ?>
                         <div class="faq-item">
                             <div class="faq-question">
-                                <span><?php echo $i; ?>. Lorem ipsum dolor sit amet, ?</span>
+                                <span><?php echo $i; ?>. Lorem ipsum dolor sit amet</span>
                                 <span class="faq-icon">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="black"
                                         stroke-width="1.5">
