@@ -235,40 +235,44 @@ include 'header.php';
 </section>
 
 <section class="listen-section">
-    <div class="container">
-        <div class="listen-header">
-            <div>
-                <span class="listen-tag">work</span>
-                <h2 class="listen-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
-                <p class="listen-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-        </div>
+    <div class="listen-card-wrap">
+        <div class="listen-bg-text left">work</div>
+        <div class="listen-bg-text right">img</div>
 
-        <div class="testimonials-grid">
-            <div class="listen-card-wrap">
-                <div class="listen-bg-text left">work</div>
-                <div class="listen-bg-text right">img</div>
-                <div class="testimonial-card testimonial-card--light">
+        <div class="testimonial-card testimonial-card--light">
+            <div class="testimonial-top">
+                <div class="testimonial-avatar-row">
                     <div class="testimonial-avatar">
-                        <div class="avatar-img" style="background-color:#111;"></div>
-                    </div>
-                    <div class="testimonial-content">
-                        <span class="quote-icon">“</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.</p>
-                        <div class="testimonial-author">
-                            <strong>Name</strong>
-                            <span>Role</span>
+                        <div class="avatar-img">
+                            <img src="./assets/user.png" />
                         </div>
                     </div>
-                    <div class="testimonial-meta">
-                        <span>company name</span>
-                        <span>@instagram</span>
+                    <div class="testimonial-author">
+                        <strong>Name</strong>
+                        <span>Role</span>
                     </div>
                 </div>
             </div>
+            <div class="quote-image-section">
+                <img src="./assets/quote.png" />
+            </div>
+            <div class="testimonial-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+            </div>
+
+            <div class="testimonial-meta">
+                <span>company name</span>
+                <span>@instagram</span>
+            </div>
         </div>
+    </div>
+
+    <div class="listen-scroll-indicator">
+        <div class="scroll-bar">
+            <div class="scroll-thumb"></div>
+        </div>
+
     </div>
 </section>
 
