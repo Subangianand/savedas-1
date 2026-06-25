@@ -116,7 +116,7 @@
     --bg-color: #ffffff;
     --text-color: #111111;
     --pink-color: #ff3366;
-    --grey-color: #888888;
+    --grey-color: rgb(0 0 0 / 40%);
     --light-grey: #f0f0f0;
     --black-bg: #0a0a0a;
 }
@@ -134,13 +134,6 @@ a {
     color: inherit;
 }
 
-@utility container {
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 5%;
-    padding-right: 5%;
-}
 
 .pink-text {
     color: var(--pink-color);
@@ -151,14 +144,19 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Delight', sans-serif;
 }
 
-
+.hero{
+    padding: 30px 30px 60px 30px;
+}
+.recently-saved{
+    padding: 60px 0px;
+}
 /* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 5%;
     background-color: var(--bg-color);
+    padding: 30px 30px;
 }
 
 .logo {
@@ -199,8 +197,6 @@ a.logo {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
     gap: 2rem;
 }
 
@@ -293,8 +289,7 @@ a.logo {
     color: white;
     padding: 1.5rem 0;
     overflow: hidden;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    margin-top: 3rem;
+    margin-top: 70px;
 }
 
 .marquee-content {
@@ -302,13 +297,10 @@ a.logo {
     white-space: nowrap;
     animation: marquee 20s linear infinite;
     gap: 4rem;
-    font-size: 1.1rem;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: 600;
 }
 
-.marquee-content .highlight {
-    color: var(--pink-color);
-}
 
 @keyframes marquee {
     0% { transform: translateX(0); }
@@ -321,26 +313,24 @@ a.logo {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2.5rem;
+    padding: 0px 30px;
 }
-
+.section-header h2 {
+    font-size: 69px;
+    font-weight: 600;
+}
 .view-all {
-    background-color: var(--grey-color);
+ background-color: var(--grey-color);
     color: white;
-    padding: 0.5rem 1.2rem;
+    padding: 7px 24px;
     border-radius: 2rem;
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: 600;
     transition: background-color 0.3s ease;
 }
 
 .view-all:hover {
     background-color: #666;
-}
-
-/* Recently Saved */
-.recently-saved {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
 }
 
 .portfolio-grid {
@@ -404,11 +394,6 @@ a.logo {
 .slider-count {
     font-size: 0.85rem;
     font-weight: 600;
-}
-
-/* Services Section Updated */
-.services {
-    padding-bottom: 5rem;
 }
 
 .services-content {
@@ -586,11 +571,6 @@ a.logo {
     transition: transform 0.1s linear;
 }
 
-/* Recently Saved (Works) Section */
-.recently-saved {
-    padding: 3rem 0;
-}
-
 .underlined-title {
     font-size: 3rem;
     font-weight: 700;
@@ -599,7 +579,8 @@ a.logo {
 .portfolio-content {
     position: relative;
     width: 100%;
-    margin-top: 3rem;
+    margin-top: 20px;
+    padding-left: 30px;
 }
 
 .portfolio-carousel {
@@ -688,15 +669,16 @@ a.logo {
 }
 
 .manifesto h2 {
-    font-size: 4.5rem;
-    line-height: 1;
+font-size: 110px;
+    line-height: 125px;
     margin-bottom: 1.5rem;
-    letter-spacing: -0.04em;
+    font-weight: bold;
+    margin-top: 40px;
 }
 
 .manifesto-subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    font-size:36px;
+    margin-bottom:50px;
 }
 
 .manifesto-boast {
@@ -717,7 +699,7 @@ a.logo {
 
 /* About Section */
 .about {
-    padding: 6rem 5%;
+    padding: 60px 30px;
 }
 
 .about-header {
@@ -725,15 +707,16 @@ a.logo {
 }
 
 .about-header h2 {
-    font-size: 4rem;
-    letter-spacing: -0.04em;
-    margin-bottom: 1.5rem;
+    font-size: 69px;
+    line-height: 70px;
+    font-weight: 600;
+    margin-bottom: 30px;
 }
 
 .about-subtitle {
-    font-size: 2.2rem;
+    font-size: 50px;
     font-weight: 500;
-    line-height: 1.2;
+    line-height: 60px;
 }
 
 .about-content {
@@ -753,7 +736,7 @@ a.logo {
 }
 
 .about-text {
-    flex: 1.2;
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
@@ -761,27 +744,24 @@ a.logo {
 }
 
 .about-text h3 {
-    font-size: 2rem;
+    font-size:40px;
     font-weight: 500;
-    margin-bottom: 1rem;
-    letter-spacing: -0.02em;
 }
 
 .about-text p {
-    font-size: 0.95rem;
-    line-height: 1.5;
-    color: #111;
+    font-size:20px;
+    line-height: 30px;
+    color:black;
 }
 
 .meet-team {
     display: inline-flex;
     align-items: center;
     gap: 0.8rem;
-    font-weight: 700;
-    font-size: 1.8rem;
+    font-weight: 600;
+    font-size: 40px;
     margin-top: 1rem;
     transition: gap 0.3s ease;
-    letter-spacing: -0.04em;
 }
 
 .meet-team:hover {
