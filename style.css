@@ -184,6 +184,14 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
 /* Logo as link */
 a.logo {
     text-decoration: none;
@@ -1713,21 +1721,7 @@ font-size: 36px;
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
-    .services-list-grid {
-        grid-template-columns: 1fr;
-    }
-    .services-list-preview {
-        display: none;
-    }
-    .approach-steps {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .testimonials-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
+/* Removed duplicate mobile block; styles moved to main @media at bottom */
 @media (max-width: 768px) {
     .approach-steps {
         grid-template-columns: 1fr;
@@ -3272,9 +3266,209 @@ span.copy-right-icon {
 
 /* Responsive Exact */
 @media (max-width: 1024px) {
+    /* Global Typography Rescale for Mobile */
+    h1 { font-size: 36px !important; line-height: 1.2 !important; letter-spacing: -1px !important; }
+    h2 { font-size: 30px !important; line-height: 1.3 !important; letter-spacing: -0.5px !important; }
+    h3 { font-size: 24px !important; line-height: 1.4 !important; }
+    p { font-size: 16px; line-height: 1.5; }
+
+    .about-hero-title-exact { font-size: 38px !important; line-height: 1.1 !important; margin-bottom: 0px;}
+    .about-hero-text-exact p { font-size: 16px !important; line-height: 1.5; }
+
+    /* General Typography & Spacing Overrides */
+    .navbar { padding: 15px 20px; flex-direction: row; justify-content: space-between; align-items: center; position: relative; }
+    .hero { padding: 20px 20px 0px 20px; flex-direction: column; align-items: flex-start; }
+    .hero-left h1 { font-size: 36px !important; line-height: 1.2 !important; margin-bottom: 20px; letter-spacing: -1px; }
+    
+    .show-reel { height: 350px; }
+    .show-reel h2 { font-size: 32px !important; }
+    .show-reel-overlay h2 { font-size: 28px !important; }
+    .marquee-section { margin-top: 30px; padding: 10px 0; }
+    .marquee-content { font-size: 15px; gap: 1.5rem; }
+    
+    .manifesto { padding: 30px 20px; text-align: center; }
+    .manifesto h2 { font-size: 30px !important; line-height: 1.25 !important; margin-bottom: 15px; letter-spacing: -0.5px; }
+    .manifesto-subtitle { font-size: 16px !important; margin-bottom: 0px;}
+    .git-form-container{
+            padding: 20px;
+    }
+    .get-in-touch-exact{
+            gap: 2rem;
+    }
+    .git-form-container form
+    {    padding: 0px;}
+    .git-left{width: 100%;}
+    .section-header { padding: 0 20px; flex-direction: column; align-items: flex-start; gap: 10px; margin-bottom: 1.5rem; }
+    .section-header h2 { font-size: 30px !important; line-height: 1.2; }
+    .view-all { font-size: 14px; padding: 6px 14px; }
+    
+    .portfolio-grid { grid-template-columns: 1fr; padding: 0 20px; gap: 1rem; }
+    .portfolio-content { padding-left: 20px; }
+    
+    .underlined-title { font-size: 28px !important; }
+    .recently-saved { padding: 40px 0; }
+    
+    .mobile-menu-btn { display: block; }
+    .nav-links { 
+        display: none; 
+        position: absolute; 
+        top: 100%; 
+        left: 0; 
+        width: 100%; 
+        background-color: var(--bg-color); 
+        flex-direction: column; 
+        align-items: center; 
+        padding: 20px; 
+        gap: 15px; 
+        box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); 
+        z-index: 100;
+    }
+    .nav-links.active { display: flex; }
+    
+    .services-carousel { padding-left: 25px; padding-right: 25px; }
+    .service-card { width: 240px; height: 350px; }
+    .service-card.active { width: 85vw; height: 500px; }
+    .service-card-content { padding: 20px; }
+    .service-card-content h4 { font-size: 22px; margin-bottom: 8px; }
+    .service-card.active .service-card-desc { font-size: 15px; max-height: 150px; }
+    .services-info-panel { height: 160px; }
+    .slider-indicator { margin-top: 1rem; }
+    
+    .portfolio-carousel { margin-right: 0; padding-right: 25px; padding-left: 25px; width: 100%; }
+    .portfolio-card { width: 85vw; }
+    
+    .footer-exact { padding: 30px 20px 20px 20px; }
+    .footer-grid-exact { grid-template-columns: 1fr; gap: 25px; margin-bottom: 25px; }
+    .footer-col-1 p { font-size: 16px !important; line-height: 1.5; }
+    .footer-contact p { font-size: 16px !important; }
+    .footer-contact span { font-size: 12px; }
+    .f-label { font-size: 12px; margin-bottom: 8px; }
+    .footer-col-2 a { font-size: 20px; line-height: 1.4; }
+    
+    .footer-bottom-exact { flex-direction: column; gap: 15px; text-align: center; margin-bottom: 20px; }
+    .fb-right { flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .fb-right span, .fb-right span.heading { font-size: 16px; margin-right: 10px; }
+    .fb-left { font-size: 14px; }
+    
+    .huge-footer-logo { font-size: 32px !important; margin: 20px 0 15px 0; line-height: 40px; }
+    .huge-footer-logo::before { top: -15px; }
+    .footer-legal { justify-content: center; gap: 15px; }
+    .footer-legal a { font-size: 13px; }
+span.copy-right-icon {
+    font-size: 24px !important;
+    line-height: 24px !important;
+}
     .about-hero-exact { flex-direction: column; gap: 2rem; }
     .visual-cards-grid { grid-template-columns: 1fr; }
     .two-img-grid-exact { grid-template-columns: 1fr; }
     .team-grid-3 { grid-template-columns: 1fr; }
     .get-in-touch-exact { flex-direction: column-reverse; }
+
+    /* Contact Page Mobile Adjustments */
+    .contact-page { padding: 30px 0; }
+    .contact-header { padding: 0 15px; margin-bottom: 30px; }
+    .contact-title { font-size: 36px !important; margin-bottom: 15px; }
+    
+    .contact-views { padding: 0 15px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 30px; }
+    .contact-info { padding-right: 0; }
+    .contact-info h2 { font-size: 26px !important; line-height: 32px !important; margin-bottom: 10px; }
+    
+    .info-row { flex-direction: column; align-items: flex-start; gap: 5px; margin-bottom: 15px; }
+    .info-row .label { width: auto; font-size: 12px; }
+    .info-row .value { font-size: 18px !important; }
+    
+    .info-socials { gap: 10px; }
+    .social-row a, .social-handle { font-size: 15px; }
+    .social-row a { min-width: 110px; }
+    
+    .info-address .label { font-size: 13px; }
+    .info-address .value { font-size: 16px !important; }
+    
+    .contact-form-wrapper { justify-content: center; }
+    .black-card { padding: 30px 15px; }
+    
+    .call-card { padding: 30px 15px; min-height: 350px; border-radius: 20px; }
+    .call-card h2 { font-size: 30px !important; margin-bottom: 15px; }
+    .call-card p { font-size: 15px !important; line-height: 22px; margin-bottom: 25px; }
+    
+    .faq-section { grid-template-columns: 1fr; gap: 30px; padding: 40px 15px; }
+    .faq-header h2 { font-size: 32px !important; }
+    .faq-header p { font-size: 16px !important; line-height: 24px; }
+    
+    .faq-accordion-wrapper { justify-content: center; }
+    .faq-accordion { padding: 15px; }
+    .faq-question { padding: 15px; font-size: 15px; }
+    .faq-item.active .faq-answer { padding: 0 15px 15px 15px; font-size: 14px; }
+    .visual-cards-grid, .two-img-grid-exact{
+     display: flex;
+        flex-direction: column;
+    }
+    .founder-card-header{
+        flex-direction: column;
+    row-gap: 12px;
+    }
+    .f-name{
+            line-height: 43px;
+    }
+    .team-wrapper-exact{
+        padding:2rem;
+    }
+    .team-header-flex{
+            flex-direction: column;
+    row-gap: 20px;
+    }
+    .visual-card-top{
+        margin-bottom: 20px;
+        font-size:40px;
+        line-height: 50px;
+    }
+    .about-hero-text-exact p br{
+        display: none;  
+    }
+    
+    /* Services Page Mobile Adjustments */
+    .services-list-section { padding: 40px 15px; }
+    .services-list-header { margin-bottom: 30px; }
+    .services-list-header h2 { font-size: 36px !important; line-height: 40px; margin-bottom: 10px; }
+    .services-list-header h3 { font-size: 24px !important; line-height: 28px; margin-bottom: 15px; }
+    .services-list-header p { font-size: 16px !important; line-height: 24px; margin-bottom: 20px; padding-right: 0; }
+    .services-list-grid { grid-template-columns: 1fr; gap: 40px; }
+    
+    .svc-num { font-size: 20px; min-width: 40px; }
+    .svc-name { font-size: 28px !important; padding-left: 15px; }
+    .service-list-item.active .svc-name, .service-list-item:hover .svc-name { font-size: 28px !important; }
+    
+    .services-list-preview { display: flex !important; padding-top: 20px; }
+    .services-preview-image { height: 250px; font-size: 1.2rem; border-radius: 15px; }
+    .preview-img-client { bottom: 15px; left: 15px; font-size: 14px; }
+    .services-preview-title { font-size: 18px; }
+    .services-preview-text { font-size: 16px; line-height: 24px; }
+    .service-category-pill { font-size: 14px; padding: 6px 15px; width: auto; }
+    
+    .approach-section { padding: 40px 15px; }
+    .approach-title { font-size: 36px !important; margin-bottom: 15px; }
+    .approach-subtitle { font-size: 16px; margin-bottom: 30px; }
+    .approach-steps { display: flex; flex-direction: column; height: auto; gap: 15px; }
+    .approach-step { padding: 20px; }
+    .approach-step h3 { font-size: 24px !important; line-height: 30px; }
+    .approach-step.active h3 { font-size: 32px !important; line-height: 36px; }
+    .step-content { width: auto; max-height: none !important; opacity: 1 !important; pointer-events: auto !important; margin-top: 15px; display: none; }
+    .approach-step.active .step-content { display: block; }
+    .step-content p, .step-content li { font-size: 15px; line-height: 22px; }
+    
+    .large-quote { padding: 40px 15px 0; }
+    .large-quote blockquote { font-size: 32px !important; margin-bottom: 20px; }
+    .large-quote p { font-size: 16px !important; line-height: 24px; }
+    
+    .listen-section { padding: 40px 0 0; }
+    .listen-card-wrap { min-height: auto; padding: 30px 15px; }
+    .listen-bg-text { font-size: 60px; }
+    .testimonial-card--light { padding: 20px; }
+    .testimonial-author strong { font-size: 24px !important; line-height: 28px; }
+    .testimonial-author span { font-size: 16px; }
+    .quote-icon { font-size: 36px; }
+    .testimonial-body p { font-size: 18px; line-height: 26px; }
+    .testimonial-body { margin-bottom: 40px; }
+    .scroll-bar { width: 150px; }
 }
