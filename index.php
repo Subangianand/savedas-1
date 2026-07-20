@@ -25,17 +25,19 @@ include 'header.php';
 
 <section class="marquee-section">
     <div class="marquee-content">
-        <span>Owala Homes</span>
-        <span>Old Macca's Foods</span>
-        <span class="highlight">Brands worked with</span>
         <span>4Degree</span>
         <span>The Indian Craft</span>
+        <span>Old Mercara Foods</span>
+        <span>Create Homes</span>
+        <span>Residency Towers</span>
+        <span>XTM Athletics</span>
         <!-- Duplicated for seamless scrolling -->
-        <span>Owala Homes</span>
-        <span>Old Macca's Foods</span>
-        <span class="highlight">Brands worked with</span>
         <span>4Degree</span>
         <span>The Indian Craft</span>
+        <span>Old Mercara Foods</span>
+        <span>Create Homes</span>
+        <span>Residency Towers</span>
+        <span>XTM Athletics</span>
     </div>
 </section>
 
@@ -406,7 +408,11 @@ include 'header.php';
             <p>Founded by Barkha and Subangi, who bring together creative direction and design thinking. Saved As
                 comes that same energy forward, now shaped with clarity, experience, and a strong shared point of
                 view.</p>
-            <a href="about.php" class="meet-team">Meet the team <span class="arrow-circle">&#8594;</span></a>
+            <a href="about.php" class="meet-team">Meet the team <span class="arrow-circle"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14" fill="none">
+                        <path d="M1 7H15M9 13L15 7L9 1" stroke="black" style="stroke:black;stroke-opacity:1;"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg></span></a>
         </div>
     </div>
 </section>
